@@ -66,10 +66,10 @@ app.use(webpackHotMiddleware(webpackCompiler, {
   log: console.log,
 }));
 
+app.use('/api/authentication', authentication);
 app.use('/api/users', users);
 app.use('/api', api);
 app.use('/*', index);
-app.use('/api/authentication', authentication);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
