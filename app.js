@@ -20,6 +20,7 @@ const webpackHotMiddleware = require('webpack-hot-middleware');
 const index = require('./routes/index');
 const users = require('./routes/api/users');
 const api = require('./routes/api/index');
+const authentication = require('./routes/api/authentication');
 
 const app = express();
 
@@ -68,6 +69,7 @@ app.use(webpackHotMiddleware(webpackCompiler, {
 app.use('/api/users', users);
 app.use('/api', api);
 app.use('/*', index);
+app.use('/api/authentication', authentication);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
