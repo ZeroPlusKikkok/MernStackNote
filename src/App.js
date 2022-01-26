@@ -1,10 +1,9 @@
 import React from 'react';
-import Template from './components/Template';
 
 function App() {
   return (
     <div className="App">
-      <Template />
+      <h1>Start New Coding agint</h1>
     </div>
   );
 }
